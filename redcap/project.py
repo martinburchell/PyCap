@@ -703,3 +703,8 @@ class Project(object):
         pl = self.__basepl(content='project', format=format)
 
         return self._call_api(pl, 'exp_proj')[0]
+
+    def generate_next_record_name(self):
+        pl = self.__basepl(content='generateNextRecordName')
+
+        return self._call_api(pl, 'exp_next_id')[0]
